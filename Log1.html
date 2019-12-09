@@ -27,12 +27,13 @@
 				string += String.fromCharCode(Math.floor(Math.random() * 95 + 32))
 			}
 		}
-		function randomChange(item, index){
+		function randomChange(item){
 			item.innerHTML = randomString(5);
 		}
 		function whysomanyfunctions(){
-			console.log(document.getElementsByTagName("span"))
-			document.getElementsByTagName("span").forEach(randomChange);
+			for(let item of document.getElementsByTagName){
+				randomChange(item);
+			}
 		}
 		
 		setInterval(whysomanyfunctions, 100);
