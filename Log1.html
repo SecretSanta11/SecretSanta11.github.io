@@ -31,9 +31,10 @@
 			item.innerHTML = randomString(5);
 		}
 		function whysomanyfunctions(){
+			console.log(document.getElementsByTagName("span"))
 			document.getElementsByTagName("span").forEach(randomChange);
 		}
 		
-		setInterval(whysomanyfunctions(), 100);
+		setInterval(whysomanyfunctions, 100);
 	</script>
 </html>
