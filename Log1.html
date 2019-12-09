@@ -10,7 +10,7 @@
 	<body>
 		Connection establishing, connecting on port <span></span>, IP <span></span><br>
 		<br>
-		Hello? Anyone? This is <span></span> calling from <span></span>.<br>
+		Hello? Anyone? This is <span></span> relecommunicating from <span></span>.<br>
 		There is an emergency here. The <span></span> knows that we know all about their <span></span>.<br>
 		<br>
 		They're attacking.<br>
@@ -20,4 +20,20 @@
 		We will encrypt it.<br>
 		U2VjcmV0U2FudGExMS5naXRodWIuaW8vTG9nMi5odG1s.
 	</body>
+	<script>
+		function randomString(length){
+			var string = "";
+			for(var i = 0; i < length; i++){
+				string += String.fromCharCode(Math.floor(Math.random() * 95 + 32))
+			}
+		}
+		function randomChange(item, index){
+			item.innerHTML = randomString(5);
+		}
+		function whysomanyfunctions(){
+			document.getElementsByTagName("span").forEach(randomChange);
+		}
+		
+		setInterval(whysomanyfunctions(), 100);
+	</script>
 </html>
