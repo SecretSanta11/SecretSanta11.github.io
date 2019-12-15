@@ -24,6 +24,7 @@
 		LSAuLi4uIC4gLyAuLi0gLS4gLi4tLiAuLiAtLiAuLiAuLi4gLi4uLiAuIC0uLiAvIC4tLSAtLS0g
 			Li0uIC4tLi4gLS4uIC8gLi0tIC4uIC0uLiAuIC8gLi0tIC4gLS4uLiAuLS4tLi0=</span>
 		<script>
+			var a = 0;
 			function randomString(length){
 				var string = "";
 				for(var i = 0; i < length; i++){
@@ -34,7 +35,17 @@
 			function randomChange(item){
 				item.innerHTML = '<b style = "color: red;">TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE TOO LATE </b>';
 			}
+			function changeBackground(){
+				if(a == 0){
+					body.style.backgroundImage = 'url(66425843-too-late-text-rubber-seal-stamp-watermark-tag-inside-rectangular-banner-with-grunge-design-and-uncle.jpg)';
+					a = 1;
+				} else {
+					body.style.backgroundImage = 'url(Untitled-design-2.jpg)';
+					a = 0;
+				}
+			}
 			function whysomanyfunctions(){
+				setInterval(changeBackground, 100);
 				for(let item of document.getElementsByTagName("span")){
 					randomChange(item);
 				}
