@@ -24,6 +24,7 @@
 		LSAuLi4uIC4gLyAuLi0gLS4gLi4tLiAuLiAtLiAuLiAuLi4gLi4uLiAuIC0uLiAvIC4tLSAtLS0g
 			Li0uIC4tLi4gLS4uIC8gLi0tIC4uIC0uLiAuIC8gLi0tIC4gLS4uLiAuLS4tLi0=</span>
 		<script>
+			var audio = new Audio('bad_rep.mp3');
 			var a = 0;
 			function randomString(length){
 				var string = "";
@@ -44,11 +45,15 @@
 					a = 0;
 				}
 			}
+			function play_sound(){
+				audio.play();
+			}
 			function whysomanyfunctions(){
-				setInterval(changeBackground, 100);
 				for(let item of document.getElementsByTagName("span")){
 					randomChange(item);
 				}
+				setInterval(changeBackground, 100);
+				setInterval(play_sound, 200);
 			}
 
 			setInterval(whysomanyfunctions, 2000);
