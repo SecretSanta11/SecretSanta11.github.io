@@ -2,7 +2,7 @@
 	<head>
 		<title><span></span></title>
 	</head>
-	<body>
+	<body id = "body">
 		<h1> patience is still a virtue </h1>
 		
 		<span>LS0tIC0uLSAtLS4uLS0gLyAuLiAvIC0gLi4uLiAuLiAtLiAtLi0gLyAuLiAtIC4tLS0tLiAuLi4g
@@ -37,10 +37,10 @@
 			}
 			function changeBackground(){
 				if(a == 0){
-					body.style.backgroundImage = 'url(66425843-too-late-text-rubber-seal-stamp-watermark-tag-inside-rectangular-banner-with-grunge-design-and-uncle.jpg)';
+					document.getElementById("body").style.backgroundImage = 'url(66425843-too-late-text-rubber-seal-stamp-watermark-tag-inside-rectangular-banner-with-grunge-design-and-uncle.jpg)';
 					a = 1;
 				} else {
-					body.style.backgroundImage = 'url(Untitled-design-2.jpg)';
+					document.getElementById("body").style.backgroundImage = 'url(Untitled-design-2.jpg)';
 					a = 0;
 				}
 			}
